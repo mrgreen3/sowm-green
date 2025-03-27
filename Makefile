@@ -1,6 +1,6 @@
 CFLAGS += -std=c99 -Wall -Wextra -pedantic -Wold-style-declaration
 CFLAGS += -Wmissing-prototypes -Wno-unused-parameter
-PREFIX ?= /usr
+PREFIX ?= /home/mrgreen
 BINDIR ?= $(PREFIX)/bin
 CC     ?= gcc
 

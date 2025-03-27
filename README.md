@@ -1,6 +1,8 @@
-# sowm (*~~Simple~~ Shitty Opinionated Window Manager*)
+# sowm-green 
 
-<a href="https://user-images.githubusercontent.com/6799467/66687576-9747c200-ec72-11e9-947d-5b96753eab03.jpg"><img src="https://user-images.githubusercontent.com/6799467/66687576-9747c200-ec72-11e9-947d-5b96753eab03.jpg" width="43%" align="right"></a>
+Forked project messed up by MrGreen [mrgreen@archbang.org]
+
+
 
 An itsy bitsy floating window manager (*220~ sloc!*).
 
@@ -9,10 +11,6 @@ An itsy bitsy floating window manager (*220~ sloc!*).
 - Window centering.
 - Mix of mouse and keyboard workflow.
 - Focus with cursor.
-- Rounded corners (*[through patch](https://github.com/dylanaraps/sowm/pull/58)*)
-- Titlebars (*[through patch](https://github.com/dylanaraps/sowm/pull/57)*)
-
-<a href="https://user-images.githubusercontent.com/6799467/66687814-8cd9f800-ec73-11e9-97b8-6ae77876bd1b.jpg"><img src="https://user-images.githubusercontent.com/6799467/66687814-8cd9f800-ec73-11e9-97b8-6ae77876bd1b.jpg" width="43%" align="right"></a>
 
 - Alt-Tab window focusing.
 - All windows die on exit.
@@ -24,7 +22,6 @@ An itsy bitsy floating window manager (*220~ sloc!*).
 
 <br>
 
-Patches available here: https://github.com/dylanaraps/sowm/pulls
 
 ## Default Keybindings
 
@@ -33,23 +30,23 @@ Patches available here: https://github.com/dylanaraps/sowm/pulls
 | combo                      | action                 |
 | -------------------------- | -----------------------|
 | `Mouse`                    | focus under cursor     |
-| `MOD4` + `Left Mouse`      | move window            |
-| `MOD4` + `Right Mouse`     | resize window          |
-| `MOD4` + `f`               | maximize toggle        |
-| `MOD4` + `c`               | center window          |
-| `MOD4` + `q`               | kill window            |
-| `MOD4` + `1-6`             | desktop swap           |
-| `MOD4` + `Shift` +`1-6`    | send window to desktop |
+| `MOD1` + `Left Mouse`      | move window            |
+| `MOD1` + `Right Mouse`     | resize window          |
+| `MOD1` + `f`               | maximize toggle        |
+| `MOD1` + `c`               | center window          |
+| `MOD1` + `q`               | kill window            |
+| `MOD1` + `1-6`             | desktop swap           |
+| `MOD1` + `Shift` +`1-6`    | send window to desktop |
 | `MOD1` + `TAB` (*alt-tab*) | focus cycle            |
 
 **Programs**
 
 | combo                    | action           | program        |
 | ------------------------ | ---------------- | -------------- |
-| `MOD4` + `Return`        | terminal         | `st`           |
-| `MOD4` + `d`             | dmenu            | `dmenu_run`    |
-| `MOD4` + `p`             | scrot            | `scr`          |
-| `MOD4` + `w`             | wallpaper cycler | `bud`          |
+| `MOD1` + `Return`        | terminal         | `st`           |
+| `MOD1` + `d`             | dmenu            | `dmenu_run`    |
+| `MOD1` + `p`             | scrot            | `scr`          |
+| `MOD1` + `w`             | wallpaper cycler | `bud`          |
 | `XF86_AudioLowerVolume`  | volume down      | `amixer`       |
 | `XF86_AudioRaiseVolume`  | volume up        | `amixer`       |
 | `XF86_AudioMute`         | volume toggle    | `amixer`       |
@@ -72,7 +69,6 @@ Patches available here: https://github.com/dylanaraps/sowm/pulls
     - In case of applying multiple patches, it has to be done **manually**.
 
 If you are using GDM, save the following to `/usr/share/xsessions/sowm.desktop`. It is still recommended to start `sowm` from `.xinitrc` or through
-[your own xinit implementation](https://github.com/dylanaraps/bin/blob/dfd9a9ff4555efb1cc966f8473339f37d13698ba/x).
 
 ```
 [Desktop Entry]
