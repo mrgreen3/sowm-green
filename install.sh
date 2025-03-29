@@ -1,7 +1,7 @@
 #!/bin/bash
 # SOWM-GREEN install script, modified by mrgreen 
 #
-# 
+# Version 0.1
 
 
 set -e
@@ -19,10 +19,7 @@ make PREFIX="$PREFIX" >/dev/null 2>&1
 make PREFIX="$PREFIX" install >/dev/null 2>&1
 
 # Add to PATH if missing to .profile
-echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.profile"
-
-# source changes from .profile
-source "$HOME/.profile"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Ensure required packages are installed
 sudo pacman -Sy --needed alacritty dmenu feh
