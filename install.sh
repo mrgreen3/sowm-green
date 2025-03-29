@@ -6,8 +6,6 @@
 
 set -e
 
-PREFIX="$HOME/.local"
-BIN_DIR="$PREFIX/bin"
 XINITRC="$HOME/.xinitrc"
 
 # Create bin directory if needed
@@ -15,11 +13,8 @@ mkdir -p "$BIN_DIR"
 
 # Build and install sowm locally
 make clean >/dev/null 2>&1
-make PREFIX="$PREFIX" >/dev/null 2>&1
-make PREFIX="$PREFIX" install >/dev/null 2>&1
+make >/dev/null 2>&1
 
-# Add to PATH if missing to .profile
-export PATH="$HOME/.local/bin:$PATH"
 
 # Ensure required packages are installed
 sudo pacman -Sy --needed alacritty dmenu feh
@@ -41,7 +36,7 @@ cat > "$XINITRC" <<EOF
 feh --bg-scale "$WALLPAPER_PATH" &
 
 # Launch sowm
-exec sowm
+exec $HOME/sowm-greensowm
 EOF
 
 chmod +x "$XINITRC"
