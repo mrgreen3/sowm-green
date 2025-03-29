@@ -3,7 +3,7 @@
 
 #define MOD Mod1Mask
 
-const char* menu[]    = {"dmenu_run -nb '#000000' -nf '#00ff00' -sb '#005500' -sf '#ffffff'",	 0};
+const char* menu[]    = {"dmenu_run",      0};
 const char* term[]    = {"alacritty",       0};
 const char* browser[] = {"firefox",   0};
 const char* scrot[]   = {"scr",            0};
