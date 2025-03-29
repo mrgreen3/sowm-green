@@ -33,6 +33,9 @@ cat > "$XINITRC" <<EOF
 # Set wallpaper
 feh --bg-scale "$WALLPAPER_PATH" &
 
+# Start a terminal
+alacritty &
+
 # Launch sowm
 exec "$HOME/sowm-green/sowm"
 EOF
