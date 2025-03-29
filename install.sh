@@ -34,7 +34,7 @@ cat > "$XINITRC" <<EOF
 feh --bg-scale "$WALLPAPER_PATH" &
 
 # Launch sowm
-exec $HOME/sowm-green
+exec "$HOME/sowm-green/sowm"
 EOF
 
 chmod +x "$XINITRC"
