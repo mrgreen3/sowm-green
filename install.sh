@@ -8,8 +8,6 @@ set -e
 
 XINITRC="$HOME/.xinitrc"
 
-# Create bin directory if needed
-mkdir -p "$BIN_DIR"
 
 # Build and install sowm locally
 make clean >/dev/null 2>&1
@@ -36,7 +34,7 @@ cat > "$XINITRC" <<EOF
 feh --bg-scale "$WALLPAPER_PATH" &
 
 # Launch sowm
-exec $HOME/sowm-greensowm
+exec $HOME/sowm-green
 EOF
 
 chmod +x "$XINITRC"
