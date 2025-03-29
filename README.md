@@ -1,5 +1,7 @@
 # sowm-green 
 
+<a href="https://i.postimg.cc/g2kB4xQ1/photo-2025-03-29-14-47-52.jpg"><img src="https://i.postimg.cc/g2kB4xQ1/photo-2025-03-29-14-47-52.jpg" width="43%" align="right"></a>
+
 Forked [sowm](https://github.com/dylanaraps/sowm) project messed up by MrGreen [mrgreen@archbang.org]
 
 An itsy bitsy floating window manager (*220~ sloc!*).
