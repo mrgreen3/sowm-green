@@ -1,6 +1,6 @@
 # sowm-green 
 
-Forked project messed up by MrGreen [mrgreen@archbang.org]
+Forked [sowm](https://github.com/dylanaraps/sowm) project messed up by MrGreen [mrgreen@archbang.org]
 
 An itsy bitsy floating window manager (*220~ sloc!*).
 
@@ -41,15 +41,8 @@ An itsy bitsy floating window manager (*220~ sloc!*).
 
 | combo                    | action           | program        |
 | ------------------------ | ---------------- | -------------- |
-| `MOD1` + `Return`        | terminal         | `st`           |
+| `MOD1` + `Return`        | terminal         | `alacritty`    |
 | `MOD1` + `d`             | dmenu            | `dmenu_run`    |
-| `MOD1` + `p`             | scrot            | `scr`          |
-| `MOD1` + `w`             | wallpaper cycler | `bud`          |
-| `XF86_AudioLowerVolume`  | volume down      | `amixer`       |
-| `XF86_AudioRaiseVolume`  | volume up        | `amixer`       |
-| `XF86_AudioMute`         | volume toggle    | `amixer`       |
-| `XF86_MonBrightnessUp`   | brightness up    | `bri`          |
-| `XF86_MonBrightnessDown` | brightness down  | `bri`          |
 
 
 ## Dependencies
@@ -66,7 +59,9 @@ An itsy bitsy floating window manager (*220~ sloc!*).
 4) (Optional) Apply patch with `git apply patches/patch-name`
     - In case of applying multiple patches, it has to be done **manually**.
 
-If you are using GDM, save the following to `/usr/share/xsessions/sowm.desktop`. It is still recommended to start `sowm` from `.xinitrc` or through
+If you are using a log in manager then you will need the following to `/usr/share/xsessions/sowm.desktop`. 
+
+It is still recommended to start `sowm` from `.xinitrc`
 
 ```
 [Desktop Entry]
@@ -80,6 +75,7 @@ Type=Application
 ## Thanks
 
 - [2bwm](https://github.com/venam/2bwm)
+- [sowm](https://github.com/dylanaraps/sowm)
 - [SmallWM](https://github.com/adamnew123456/SmallWM)
 - [berry](https://github.com/JLErvin/berry)
 - [catwm](https://github.com/pyknite/catwm)
