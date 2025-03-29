@@ -15,7 +15,7 @@ make >/dev/null 2>&1
 
 
 # Ensure required packages are installed
-sudo pacman -Sy --needed alacritty dmenu feh
+sudo pacman -Sy --needed alacritty dmenu feh vim base-devel git
 
 # Set wallpaper path based on repo location
 WALLPAPER_PATH="$HOME/$(basename "$(pwd)")/wallpaper.jpg"
