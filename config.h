@@ -3,7 +3,7 @@
 
 #define MOD Mod1Mask
 
-const char* menu[]    = {"$HOME/sowm-green/scripts/dmenu-green",      0};
+const char* menu[]    = {"sh", "-s","$HOME/sowm-green/scripts/dmenu-green",      0};
 const char* term[]    = {"alacritty",       0};
 const char* browser[] = {"firefox",   0};
 const char* scrot[]   = {"scr",            0};
