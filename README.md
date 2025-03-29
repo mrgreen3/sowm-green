@@ -2,8 +2,6 @@
 
 Forked project messed up by MrGreen [mrgreen@archbang.org]
 
-
-
 An itsy bitsy floating window manager (*220~ sloc!*).
 
 - Floating only.
