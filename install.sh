@@ -1,4 +1,8 @@
 #!/bin/bash
+# SOWM-GREEN install script, modified by mrgreen 
+#
+# 
+
 
 set -e
 
@@ -14,30 +18,34 @@ make clean >/dev/null 2>&1
 make PREFIX="$PREFIX" >/dev/null 2>&1
 make PREFIX="$PREFIX" install >/dev/null 2>&1
 
-# Add to PATH if missing
-if [[ ":$PATH:" != *":$BIN_DIR:"* ]]; then
-  if ! grep -q "$BIN_DIR" "$HOME/.profile"; then
-    echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.profile"
-    echo "⚠️  Added $BIN_DIR to PATH in ~/.profile — restart your shell or run: source ~/.profile"
-  fi
-fi
+# Add to PATH if missing to .profile
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.profile"
+
+# source changes from .profile
+source "$HOME/.profile"
 
 # Ensure required packages are installed
-REQUIRED_PKGS=(alacritty feh dmenu)
-sudo pacman -Sy
-sudo pacman -S --needed "${REQUIRED_PKGS[@]}"
+sudo pacman -Sy --needed alacritty dmenu feh
 
-# Create a simple .xinitrc if it doesn't exist
-if [ ! -f "$XINITRC" ]; then
-  cat > "$XINITRC" <<EOF
+# Set wallpaper path based on repo location
+WALLPAPER_PATH="$HOME/$(basename "$(pwd)")/wallpaper.jpg"
+XINITRC="$HOME/.xinitrc"
+
+# Backup existing .xinitrc and write a new one
+if [ -f "$XINITRC" ]; then
+  TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+  cp "$XINITRC" "$XINITRC.bak-$TIMESTAMP"
+fi
+
+cat > "$XINITRC" <<EOF
 #!/bin/sh
 
-# Set wallpaper (edit this path)
-feh --bg-scale /path/to/your/wallpaper.jpg &
+# Set wallpaper
+feh --bg-scale "$WALLPAPER_PATH" &
 
 # Launch sowm
 exec sowm
 EOF
-  chmod +x "$XINITRC"
-fi
+
+chmod +x "$XINITRC"
 
