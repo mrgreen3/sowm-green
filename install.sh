@@ -8,14 +8,12 @@ set -e
 
 XINITRC="$HOME/.xinitrc"
 
+# Ensure required packages are installed
+sudo pacman -Sy --needed alacritty dmenu feh scrot vim sxhkd dunst base-devel git
 
 # Build and install sowm locally
 make clean >/dev/null 2>&1
 make >/dev/null 2>&1
-
-
-# Ensure required packages are installed
-sudo pacman -Sy --needed alacritty dmenu feh scrot vim sxhkd dunst base-devel git
 
 # Ensure required directories exist
 mkdir -p "$HOME/Pictures"
