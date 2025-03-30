@@ -1,0 +1,7 @@
+ think I need to modify dmenu command to include sh -c and wrap path in single quotes. Test or go back to original version.
+
+ Figure out something along same lines for scrot, although I can run it in a terminal if need be
+
+ Do not need brightness controls or volume either...
+
+

@@ -1,3 +1,0 @@
-#!/bin/sh
-dmenu_run -nb '#000000' -nf '#00ff00' -sb '#005500' -sf '#ffffff'
-

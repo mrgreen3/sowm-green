@@ -15,7 +15,10 @@ make >/dev/null 2>&1
 
 
 # Ensure required packages are installed
-sudo pacman -Sy --needed alacritty dmenu feh vim base-devel git
+sudo pacman -Sy --needed alacritty dmenu feh scrot vim sxhkd dunst base-devel git
+
+# Ensure required directories exist
+mkdir -p "$HOME/Pictures"
 
 # Set wallpaper path based on repo location
 WALLPAPER_PATH="$HOME/$(basename "$(pwd)")/wallpaper.jpg"
@@ -35,6 +38,12 @@ feh --bg-scale "$WALLPAPER_PATH" &
 
 # Start a terminal
 alacritty &
+
+# sxhkd
+sxhkd -c "$HOME/sowm-green/configs/sxhkdrc" &
+
+# dunst
+dunst &
 
 # Launch sowm
 exec "$HOME/sowm-green/sowm"

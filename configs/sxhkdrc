@@ -1,0 +1,20 @@
+# Launch terminal
+alt + Return
+    alacritty
+
+# Green-themed dmenu
+alt + d
+    dmenu_run -nb '#000000' -nf '#00ff00' -sb '#005500' -sf '#ffffff'
+
+# Reload sxhkd
+alt + Escape
+    pkill -USR1 -x sxhkd
+
+# Screenshot full screen
+alt + Print
+    scrot ~/Pictures/screenshot-%Y-%m-%d-%H%M%S.png && notify-send "Screenshot saved"
+
+# Screenshot selection
+alt + shift + Print
+    scrot -s ~/Pictures/screenshot-%Y-%m-%d-%H%M%S.png
+
