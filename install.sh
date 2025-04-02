@@ -1,7 +1,7 @@
 #!/bin/bash
 # SOWM-GREEN install script, modified by mrgreen 
 #
-# Version 0.1
+# Version 0.2
 
 
 set -e
